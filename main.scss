@@ -1,8 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+@import './sass/helpers/variables';
+@import './sass/helpers/mixins';
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: $body-font;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: $violet url(./images/bg-mobile.svg) no-repeat;
+    color: $white;
+}
+
+header, main, footer {
+    width: 80%;
+    margin: 0 auto; // Create a mixin for margin top an bottom but auto for sides?
+}
+
+header {
+    margin: 2rem auto 3.5rem;
+
+    img {
+        width: 7.7rem;
+    }
+}
+
+main {
+    text-align: center;
+
+    img {
+        width: 100%;
+    }
+
+    h1 {
+        font-family: $heading-font;
+        font-size: 1.5rem;
+        margin-top: 3.5rem;
+    }
+
+    p {
+      line-height: 1.5;  
+    }
+
+    button {
+        margin-top: 0.5rem;
+        padding: 0.75rem 4.75rem;
+        color: $violet;
+        background-color: $white;
+        border: none;
+        border-radius: 4rem;
+        box-shadow: 1px 4px 14px hsla(0, 0%, 0%, 0.3);
+        cursor: pointer;
+    }
+}
+
+footer {
+    margin-top: 4rem;
+
+    .social-media {
+        margin: 0 auto;
+        width: 7rem;
+        @include flex($j-content: space-between);
+
+        &__icon {
+            color: inherit;
+            width: 1.8rem;
+            height: 1.8rem;
+            border: 1px solid $white;
+            border-radius: 50%;
+            @include flex;
+        }
+
+        .icon {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            stroke-width: 0;
+            stroke: currentColor;
+            fill: currentColor;
+            font-size: 0.8125rem;
+
+            &__name {
+                width: 1px;
+                height: 1px;
+                position: absolute;
+                margin: -1px;
+                padding: 0;
+                overflow: hidden;
+            }
+        }
+
+    }
+}
+
 .attribution { 
+    margin: 2rem auto;
     font-size: 11px; 
     text-align: center; 
     
     a { 
-        color: hsl(228, 45%, 44%); 
+        color: hsl(228, 99%, 26%); 
     }
 }
