@@ -13,7 +13,8 @@ html {
 body {
   padding: 0;
   margin: 0;
-  background: #674baf url(./images/bg-mobile.svg) no-repeat;
+  background: #674baf url(./images/bg-mobile.svg) no-repeat center top;
+  background-size: contain;
   color: white;
 }
 
@@ -99,6 +100,95 @@ footer .social-media .icon__name {
 }
 .attribution a {
   color: #011b84;
+}
+
+@media screen and (min-width: 768px) {
+  header, main, footer {
+    max-width: 650px;
+  }
+
+  main h1 {
+    font-size: 3rem;
+  }
+  main p {
+    font-size: 1.125rem;
+  }
+  main button {
+    font-size: 1rem;
+  }
+
+  footer .social-media {
+    width: 9rem;
+  }
+  footer .social-media__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  footer .social-media .icon {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body {
+    background-image: url(./images/bg-desktop.svg);
+    background-position: left top;
+    background-size: auto;
+  }
+
+  header, main, footer {
+    width: 90%;
+    max-width: 1300px;
+  }
+
+  header {
+    margin-bottom: 6.5rem;
+  }
+  header img {
+    width: 12.7rem;
+  }
+
+  main {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  main img {
+    width: 55%;
+  }
+  main .description {
+    width: 40%;
+  }
+  main h1 {
+    margin: 2.5rem 0 0;
+    font-size: 2.5rem;
+  }
+  main button {
+    padding: 1rem 4.75rem;
+    font-size: 1.125rem;
+  }
+  main button:hover {
+    background-color: #e882e8;
+    color: white;
+  }
+
+  footer {
+    margin-top: 1rem;
+  }
+  footer .social-media {
+    margin: 0 0 0 auto;
+  }
+  footer .social-media__icon:hover {
+    border-color: #e882e8;
+    color: #e882e8;
+  }
+  footer .attribution {
+    text-align: right;
+    margin: 0.6875rem 0 1rem;
+  }
+  footer .attribution a:hover {
+    color: #e882e8;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

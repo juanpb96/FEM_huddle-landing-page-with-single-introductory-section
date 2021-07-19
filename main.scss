@@ -14,7 +14,8 @@ html {
 body {
     padding: 0;
     margin: 0;
-    background: $violet url(./images/bg-mobile.svg) no-repeat;
+    background: $violet url(./images/bg-mobile.svg) no-repeat center top;
+    background-size: contain;
     color: $white;
 }
 
@@ -106,5 +107,116 @@ footer {
     
     a { 
         color: hsl(228, 99%, 26%); 
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header, main, footer {
+        max-width: 650px;
+    }
+
+    main {
+        h1 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.125rem;
+        }
+
+        button {
+            font-size: 1rem;
+        }
+    }
+
+    footer {
+        .social-media {
+            width: 9rem;
+
+            &__icon {
+                width: 2.4rem;
+                height: 2.4rem;
+            }
+
+            .icon {
+                font-size: 1.1rem;
+            }
+        }
+    }
+    
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        background-image: url(./images/bg-desktop.svg);
+        background-position: left top;
+        background-size: auto;
+    }
+    
+    header, main, footer {
+        width: 90%;
+        max-width: 1300px;
+    }    
+
+    header {
+        margin-bottom: 6.5rem;
+
+        img {
+            width: 12.7rem;
+        }
+    }
+
+    main {
+        text-align: left;
+        @include flex ($j-content: space-between, $a-items: flex-start);
+
+        img {
+            width: 55%;
+        }
+
+        .description {
+            width: 40%;
+        }
+
+        h1 {
+            margin: 2.5rem 0 0;
+            font-size: 2.5rem;
+        }
+
+        button {
+            padding: 1rem 4.75rem;
+            font-size: 1.125rem;
+
+            &:hover {
+                background-color: $soft-magenta;
+                color: $white;
+            }
+        }
+    }
+
+    footer {
+        margin-top: 1rem;
+
+        .social-media {
+            margin: 0 0 0 auto;
+
+            &__icon {
+                &:hover {
+                    border-color: $soft-magenta;
+                    color: $soft-magenta;
+                }
+            }
+        }
+
+        .attribution {
+            text-align: right;
+            margin: 0.6875rem 0 1rem;
+
+            a {
+                &:hover {
+                    color: $soft-magenta;
+                }
+            }
+        }
     }
 }
